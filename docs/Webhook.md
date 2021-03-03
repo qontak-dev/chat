@@ -6,4 +6,9 @@ In Webhook API there is two endpoints that is to register webhook notification a
 
 Webhook Interaction
 
-![chatbot-flow-webhook](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Flow Webhook")
+![chatbot-flow-webhook](../assets/images/chatbot-flow-webhook.png "Flow Webhook")
+
+Endpoint's Url
+
+1. Webhook/Register
+2. Webhook/List
