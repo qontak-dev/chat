@@ -6,8 +6,7 @@ This document contains the reference and guideline for Chat API Services. This A
 All the requests referenced in the documentation start with https://chat-service.qontak.com.
 
 ## Featured API
-[chat.qontak.com](https://chat.qontak.com)
-- [Webhooks API](docs/Webhook.md): Register webhook to get notification through your system.
+- [Webhooks API](Webhook.md): Register webhook to get notification through your system.
 - WhatsApp Outbound API: Send outbound template message to your customer.
 - Conversations API: Send message to your customer within session window.
 
