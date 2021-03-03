@@ -1,7 +1,11 @@
 # Message Interaction
 
+## Incoming Message From Customer
 - `receive_message_from_customer` : send webhook when customer send message
-- `status_message` : send webhook if message status is change (created, sent, delivered, read)
+
+## Flow
+
+![postman-oauth2](../../assets/images/Customer-Send-Message.png "Customer Send Message")
 
 ### Enable Message Coming from Customer
 ```bash
@@ -196,6 +200,10 @@ curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/messa
     }
 }
 ```
+
+## Send Webhook
+
+- `status_message` : send webhook if message status is change (created, sent, delivered, read)
 
 ### Receive Webhook sent status from Broadcast / Broadcast API
 ```json
