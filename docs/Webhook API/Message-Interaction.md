@@ -84,7 +84,7 @@ Response
 }
 ```
 
-Receive Webhook
+Receive Webhook from Customer Send Message
 
 ```json
 {
@@ -124,6 +124,67 @@ Receive Webhook
         "unread_count": 2,
         "created_at": "2021-03-03T22:36:08.196Z",
         "updated_at": "2021-03-03T22:36:08.196Z",
+        "avatar": null,
+        "resolved_at": null,
+        "external_id": null,
+        "resolved_by_id": null,
+        "resolved_by_type": null
+    }
+}
+```
+
+Receive Webhook Status Message
+```json
+{
+    "id": "d27cc7ac-8281-438d-9cea-e74e627cea32",
+    "type": "text",
+    "room_id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+    "is_campaign": false,
+    "sender_id": "84d627bf-3f71-48de-bd4d-b623ad19857a",
+    "sender_type": "Models::User",
+    "sender": {
+        "name": "Agent One",
+        "avatar": {
+            "url": "https://qontak-hub-production.s3-ap-southeast-1.amazonaws.com/assets/qi-user.png",
+            "large": {
+                "url": "https://qontak-hub-production.s3-ap-southeast-1.amazonaws.com/assets/qi-user.png"
+            },
+            "medium": {
+                "url": "https://qontak-hub-production.s3-ap-southeast-1.amazonaws.com/assets/qi-user.png"
+            },
+            "small": {
+                "url": "https://qontak-hub-production.s3-ap-southeast-1.amazonaws.com/assets/qi-user.png"
+            },
+            "filename": null,
+            "size": 0
+        }
+    },
+    "participant_id": "8c10c529-360d-4880-90bf-85ccf51160a6",
+    "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+    "text": "ada yang bisa dibantu?",
+    "status": "read",
+    "participant_type": "agent",
+    "external_id": "gBEGYoEXZhAAAglXDyY42p1Do6I",
+    "local_id": null,
+    "created_at": "2021-03-03T23:00:33.492Z",
+    "reply": null,
+    "room": {
+        "id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+        "name": "Burhanudin",
+        "description": "",
+        "status": "assigned",
+        "type": "Models::CustomerServiceRoom",
+        "tags": [],
+        "channel": "wa",
+        "channel_account": "Qontak",
+        "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+        "account_uniq_id": "628117661000",
+        "channel_integration_id": "b3a2ee0b-7dac-47b8-a115-7bc63abf8f15",
+        "session": "open",
+        "session_at": "2021-03-03T22:55:52.000Z",
+        "unread_count": 0,
+        "created_at": "2021-03-03T22:36:08.196Z",
+        "updated_at": "2021-03-03T22:55:13.670Z",
         "avatar": null,
         "resolved_at": null,
         "external_id": null,
