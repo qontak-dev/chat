@@ -1,6 +1,10 @@
-# Message Interaction
+# Webhook API
+## Message Interaction
 
-Enable Message Coming from Customer
+- `receive_message_from_customer` : send webhook when customer send message
+- `status_message` : send webhook if message status is change (created, sent, delivered, read)
+
+### Enable Message Coming from Customer
 ```bash
 curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/message_interactions' \
 --header 'Authorization: Bearer WPuW1u-v21SkfqfC7NNBD9NvNg3ojy8ftuUpVy3rbU' \
@@ -13,7 +17,7 @@ curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/messa
 }'
 ```
 
-Response
+### Response
 ```json
 {
     "status": "success",
@@ -84,7 +88,7 @@ Response
 }
 ```
 
-Receive Webhook from Customer Send Message
+### Receive Webhook from Customer Send Message
 
 ```json
 {
@@ -133,7 +137,7 @@ Receive Webhook from Customer Send Message
 }
 ```
 
-Receive Webhook Status Message send from Agent
+### Receive Webhook Status Message send from Agent
 ```json
 {
     "id": "d27cc7ac-8281-438d-9cea-e74e627cea32",
@@ -194,7 +198,7 @@ Receive Webhook Status Message send from Agent
 }
 ```
 
-Receive Webhook sent status from Broadcast / Broadcast API
+### Receive Webhook sent status from Broadcast / Broadcast API
 ```json
 {
     "id": "a9fb2a77-62da-4100-a770-6f6fc8bc36de",
