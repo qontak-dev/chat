@@ -7,6 +7,7 @@
 
 ![customer-send-message](../../assets/images/Customer-Send-Message.png "Customer Send Message")
 
+
 ### Enable Message Coming from Customer
 ```bash
 curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/message_interactions' \
