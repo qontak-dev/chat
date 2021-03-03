@@ -5,6 +5,18 @@ This document contains the reference and guideline for Chat API Services. This A
 ## Basic API usage
 All the requests referenced in the documentation start with https://chat-service.qontak.com.
 
+## Authentication
+
+Each API request requires authentication to identify the permission that is responsible for making the request. Authentication is provided by access tokens.
+
+### Where are my access tokens?
+- User access token - allows you to send whatsapp hsm template. This is a private usage token and should never be shared as it gives full access to your account.
+- Bot token - allows only bot endpoint requests for Chatbot interaction.
+
+### Authentication example
+
+Authentication example
+
 ## Featured API
 - [Webhooks API](Webhook.md): Register webhook to get notification through your system.
 - WhatsApp Outbound API: Send outbound template message to your customer.
@@ -13,12 +25,3 @@ All the requests referenced in the documentation start with https://chat-service
 ## Use Case
 - Create and send outbound message templates
 - Create Chatbot using Webhooks Message Interaction
-
-## Quick Start
-You can try all API that we provided easily with Postman. Download a pre-built collection based on the Qontak Chat Open API reference here.
-
-## Host
-
-| URL        | HOST        |
-| ---------- | ----------- |
-| CHAT_URL   | https://chat-service.qontak.com      |
