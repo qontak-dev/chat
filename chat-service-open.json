@@ -1,0 +1,256 @@
+{
+  "info": {
+    "title": "Qontak Open API",
+    "description": "This API consists of Open Service",
+    "version": "1",
+    "contact": {
+      "name": "support@qontak.com"
+    }
+  },
+  "swagger": "2.0",
+  "produces": [
+    "application/json; charset=UTF-8"
+  ],
+  "host": "chat-service.qontak.com",
+  "basePath": "/api/open",
+  "tags": [
+    {
+      "name": "health"
+    },
+    {
+      "name": "message_interactions"
+    },
+    {
+      "name": "messages"
+    },
+    {
+      "name": "room_interactions"
+    }
+  ],
+  "paths": {
+    "/v1/health": {
+      "get": {
+        "summary": "Check health",
+        "description": "Check health",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "Access Token",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Check health"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        },
+        "tags": [
+          "health"
+        ],
+        "operationId": "getV1Health"
+      }
+    },
+    "/v1/messages/whatsapp/bot": {
+      "post": {
+        "summary": "Create message by bot",
+        "description": "scopes bot",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "Access Token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "room_id",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "type",
+            "type": "string",
+            "default": "text",
+            "enum": [
+              "audio",
+              "contact",
+              "document",
+              "image",
+              "location",
+              "system",
+              "text",
+              "video"
+            ],
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "file",
+            "description": "Required if type is one of audio, document, image, and video",
+            "type": "file",
+            "required": false
+          },
+          {
+            "in": "formData",
+            "name": "text",
+            "description": "Required if type is text",
+            "type": "string",
+            "required": false
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Create message by bot"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        },
+        "tags": [
+          "messages"
+        ],
+        "operationId": "postV1MessagesWhatsappBot"
+      }
+    },
+    "/v1/message_interactions": {
+      "put": {
+        "description": "Enable/disable message interactions",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "Access Token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "receive_message_from_agent": {
+                  "type": "boolean"
+                },
+                "receive_message_from_customer": {
+                  "type": "boolean"
+                },
+                "status_message": {
+                  "type": "boolean"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            },
+            "x-examples": {
+              "example-1": {
+                "receive_message_from_agent": true,
+                "receive_message_from_customer": true,
+                "status_message": true,
+                "url": "https://www.google.com"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Enable/disable message interactions"
+          }
+        },
+        "tags": [
+          "message_interactions"
+        ],
+        "operationId": "putV1MessageInteractions"
+      }
+    },
+    "/v1/room_interactions": {
+      "put": {
+        "description": "Enable/disable room interactions",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "description": "Access Token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "room_resolved": {
+                  "type": "boolean"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "example": "https://www.google.com"
+                }
+              }
+            },
+            "description": "",
+            "x-examples": {
+              "example": {
+                "room_resolved": true,
+                "url": "https://www.google.com"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Enable/disable room interactions"
+          }
+        },
+        "tags": [
+          "room_interactions"
+        ],
+        "operationId": "putV1RoomInteractions"
+      }
+    }
+  },
+  "definitions": {},
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "securityDefinitions": {}
+}
