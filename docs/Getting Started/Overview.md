@@ -21,6 +21,7 @@ Include this HTTP header for each API request:
 
 Example request
 
+
 ```bash
 curl --request GET \
   --url https://chat-service.qontak.com/api/open/v1/health \
@@ -31,8 +32,8 @@ curl --request GET \
 
 ## Featured API
 - [Webhooks API](Webhook.md): Register webhook to get notification through your system.
-- WhatsApp Outbound API: Send outbound template message to your customer.
-- Conversations API: Send message to your customer within session window.
+- [WhatsApp Outbound API]: Send WhatsApp outbound template message to your customer.
+- [Message API](): Send message to your customer within session window.
 
 ## Use Case
 - Create and send outbound message templates
