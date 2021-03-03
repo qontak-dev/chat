@@ -67,7 +67,7 @@
           {
             "in": "header",
             "name": "Authorization",
-            "description": "Access Token",
+            "description": "{{access_token}}",
             "type": "string",
             "required": true
           },
@@ -244,17 +244,5 @@
     "https"
   ],
   "consumes": [],
-  "securityDefinitions": {
-    "Authorization": {
-      "type": "oauth2",
-      "flow": "password",
-      "scopes": {},
-      "tokenUrl": "https://service.qontak.com/oauth/token"
-    }
-  },
-  "security": [
-    {
-      "Authorization": []
-    }
-  ]
+  "securityDefinitions": {}
 }

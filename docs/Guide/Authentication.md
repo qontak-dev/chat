@@ -47,3 +47,17 @@ curl --request GET \
 ```
 
 ## Using Postman
+
+Postman is an application that lets you send HTTP requests to  API endpoints. You can use Postman to obtain `access_token`. Here are the complete steps:
+
+1. Open Postman. Visit [Get Postman](https://www.getpostman.com/downloads/) to download.
+2. Click the Authorization tab under the request URL and select OAuth 2.0 as the Type
+3. Click on the Get New Access Token
+4. Select `Password` as the Grant Type
+5. Input https://chat-service.qontak.com/oauth/token to the Access Token URL field
+6. Enter your Client ID and Client Secret
+7. Finally, click on the Request Token button.
+
+
+
+
