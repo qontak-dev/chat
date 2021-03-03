@@ -21,21 +21,10 @@ Include this HTTP header for each API request:
 
 Example request
 
-```json http
-{
-  "method": "POST",
-  "url": "https://service.qontak.com/oauth/token",
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "body": {
-    "username": "<username>",
-    "password": "<password>",
-    "grant_type": "password",
-    "client_id": "RRrn6uIxalR_QaHFlcKOqbjHMG63elEdPTair9B9YdY",
-    "client_secret": "Sa8IGIh_HpVK1ZLAF0iFf7jU760osaUNV659pBIZR00"
-  }
-}
+```bash
+curl --request GET \
+  --url https://chat-service.qontak.com/api/open/v1/health \
+  --header 'Authorization: Bearer ${ACCESS_TOKEN}'
 ```
 
 
