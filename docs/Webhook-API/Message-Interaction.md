@@ -3,9 +3,9 @@
 ## Incoming Message From Customer
 - `receive_message_from_customer` : send webhook when customer send message
 
-## Flow
+### Flow
 
-![postman-oauth2](../../assets/images/Customer-Send-Message.png "Customer Send Message")
+![customer-send-message](../../assets/images/Customer-Send-Message.png "Customer Send Message")
 
 ### Enable Message Coming from Customer
 ```bash
@@ -140,6 +140,28 @@ curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/messa
 }
 ```
 
+
+## Send Message to Customer
+
+- `status_message` : send webhook if message status is change (created, sent, delivered, read)
+
+### Flow
+
+![send-message-to-customer](../../assets/images/Send-Message-to-Customer.png "Send-message to customer")
+
+### Enable Webhook Send Message to Customer
+```bash
+curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/message_interactions' \
+--header 'Authorization: Bearer WPuW1u-v21SkfqfC7NNBD9NvNg3ojy8ftuUpVy3rbU' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "receive_message_from_agent": false,
+  "receive_message_from_customer": false,
+  "status_message": true,
+  "url": "https://webhook.site/498b30f1-e74e-4bd2-b20e-9c1fea536a22"
+}'
+```
+
 ### Receive Webhook Status Message send from Agent
 ```json
 {
@@ -200,10 +222,6 @@ curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/messa
     }
 }
 ```
-
-## Send Webhook
-
-- `status_message` : send webhook if message status is change (created, sent, delivered, read)
 
 ### Receive Webhook sent status from Broadcast / Broadcast API
 ```json
