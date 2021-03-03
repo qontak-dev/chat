@@ -133,7 +133,7 @@ Receive Webhook from Customer Send Message
 }
 ```
 
-Receive Webhook Status Message
+Receive Webhook Status Message send from Agent
 ```json
 {
     "id": "d27cc7ac-8281-438d-9cea-e74e627cea32",
@@ -167,6 +167,54 @@ Receive Webhook Status Message
     "external_id": "gBEGYoEXZhAAAglXDyY42p1Do6I",
     "local_id": null,
     "created_at": "2021-03-03T23:00:33.492Z",
+    "reply": null,
+    "room": {
+        "id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+        "name": "Burhanudin",
+        "description": "",
+        "status": "assigned",
+        "type": "Models::CustomerServiceRoom",
+        "tags": [],
+        "channel": "wa",
+        "channel_account": "Qontak",
+        "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+        "account_uniq_id": "628117661000",
+        "channel_integration_id": "b3a2ee0b-7dac-47b8-a115-7bc63abf8f15",
+        "session": "open",
+        "session_at": "2021-03-03T22:55:52.000Z",
+        "unread_count": 0,
+        "created_at": "2021-03-03T22:36:08.196Z",
+        "updated_at": "2021-03-03T22:55:13.670Z",
+        "avatar": null,
+        "resolved_at": null,
+        "external_id": null,
+        "resolved_by_id": null,
+        "resolved_by_type": null
+    }
+}
+```
+
+Receive Webhook sent status from Broadcast / Broadcast API
+```json
+{
+    "id": "a9fb2a77-62da-4100-a770-6f6fc8bc36de",
+    "type": "text",
+    "room_id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+    "is_campaign": true,
+    "sender_id": "2fcf11ac-5d78-475a-9000-fea426e3c270",
+    "sender_type": "Models::SystemAccount",
+    "sender": {
+        "name": "Bot",
+        "avatar": null
+    },
+    "participant_id": "9de18858-00d7-4114-939e-7bd95c5e0e3b",
+    "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+    "text": "Kepada Yth Customer Burhanudin,\nTagihan anda akan segera jatuh tempo, mohon segera lakukan pembayaran.\n-MIC Finance",
+    "status": "sent",
+    "participant_type": "bot",
+    "external_id": "gBEGYoEXZhAAAgkDd8uUC103idc",
+    "local_id": null,
+    "created_at": "2021-03-03T23:06:36.452Z",
     "reply": null,
     "room": {
         "id": "e658411a-99aa-417d-8c6f-40e1594554a7",
