@@ -35,15 +35,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "Authorization",
-            "description": "Access Token",
-            "type": "string",
-            "required": true
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Check health"
@@ -252,5 +244,17 @@
     "https"
   ],
   "consumes": [],
-  "securityDefinitions": {}
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "oauth2",
+      "flow": "password",
+      "scopes": {},
+      "tokenUrl": "https://service.qontak.com/oauth/token"
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
 }
