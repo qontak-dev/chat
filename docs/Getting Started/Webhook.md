@@ -12,5 +12,5 @@ Webhook Notifications :
 
 Endpoint's Url
 
-1. [Webhook/Register](../../Webhook-API/Message-Interaction.md)
-2. [Webhook/List](../../Webhook-API/Message-Interaction.md#response)
+1. [Webhook/Register](../Webhook-API/Message-Interaction.md)
+2. [Webhook/List](../Webhook-API/Message-Interaction.md#response)
