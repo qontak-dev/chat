@@ -2,9 +2,11 @@
 
 In Webhook API there is two endpoints that is to register webhook notification and list all registered webhook url.
 
-## Flow
+# Flow
 
-Webhook Interaction
+Webhook Notifications :
+- Message Interactions 
+- Room Interactions
 
 ![chatbot-flow-webhook](../assets/images/chatbot-flow-webhook.png "Flow Webhook")
 
