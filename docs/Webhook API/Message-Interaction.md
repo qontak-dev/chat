@@ -1,0 +1,134 @@
+# Message Interaction
+
+Enable Message Coming from Customer
+```bash
+curl --location --request PUT 'https://chat-service.qontak.com/api/open/v1/message_interactions' \
+--header 'Authorization: Bearer WPuW1u-v21SkfqfC7NNBD9NvNg3ojy8ftuUpVy3rbU' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "receive_message_from_agent": false,
+  "receive_message_from_customer": true,
+  "status_message": false,
+  "url": "https://webhook.site/498b30f1-e74e-4bd2-b20e-9c1fea536a22"
+}'
+```
+
+Response
+```json
+{
+    "status": "success",
+    "data": {
+        "auto_assign_agent": false,
+        "auto_responder_in_office_hours": {
+            "enabled": true,
+            "message": "Halo, terima kasih telah menghubungi Qontak.com\nBisa sebutkan nama dan dari perusahaan apa?\nKami akan segera membalas pesan Anda.\n"
+        },
+        "auto_responder_out_office_hours": {
+            "enabled": true,
+            "message": "Halo, terima kasih telah menghubungi Qontak.com\n\nKami akan segera membalas pesan Anda.\n"
+        },
+        "agent_can_takeover": true,
+        "custom_agent_allocation": {
+            "enabled": false,
+            "webhooks": [
+                {
+                    "id": "8af75000-ffd0-494c-b953-4d3bdcb3057a",
+                    "event": "custom_agent_allocation",
+                    "url": ""
+                }
+            ]
+        },
+        "agent_assigned_to_room": {
+            "enabled": false,
+            "webhooks": []
+        },
+        "agent_unassigned_from_room": {
+            "enabled": false,
+            "webhooks": []
+        },
+        "room_resolved": {
+            "enabled": false,
+            "webhooks": []
+        },
+        "receive_message_from_agent": {
+            "enabled": false,
+            "webhooks": [
+                {
+                    "id": "9f544cd4-33cc-4e61-b074-e52984e6b090",
+                    "event": "message_interaction",
+                    "url": "https://webhook.site/498b30f1-e74e-4bd2-b20e-9c1fea536a22"
+                }
+            ]
+        },
+        "receive_message_from_customer": {
+            "enabled": true,
+            "webhooks": [
+                {
+                    "id": "9f544cd4-33cc-4e61-b074-e52984e6b090",
+                    "event": "message_interaction",
+                    "url": "https://webhook.site/498b30f1-e74e-4bd2-b20e-9c1fea536a22"
+                }
+            ]
+        },
+        "status_message": {
+            "enabled": false,
+            "webhooks": [
+                {
+                    "id": "9f544cd4-33cc-4e61-b074-e52984e6b090",
+                    "event": "message_interaction",
+                    "url": "https://webhook.site/498b30f1-e74e-4bd2-b20e-9c1fea536a22"
+                }
+            ]
+        }
+    }
+}
+```
+
+Receive Webhook
+
+```json
+{
+    "id": "4198c4b2-d39d-45b5-ac9c-89bccb9513ec",
+    "type": "text",
+    "room_id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+    "is_campaign": false,
+    "sender_id": "9c682ecf-6149-4d23-b6ae-d3c872194d58",
+    "sender_type": "Models::Contact",
+    "sender": {
+        "name": "Burhanudin",
+        "avatar": null
+    },
+    "participant_id": "64c4be1f-916b-4e5e-a8cd-52ec2cbb082f",
+    "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+    "text": "helo",
+    "status": "created",
+    "participant_type": "customer",
+    "external_id": "ABEGYoEXZhAAAgo-sInteMYC-oMQ",
+    "local_id": null,
+    "created_at": "2021-03-03T22:53:29.000Z",
+    "reply": null,
+    "room": {
+        "id": "e658411a-99aa-417d-8c6f-40e1594554a7",
+        "name": "Burhanudin",
+        "description": "",
+        "status": "unassigned",
+        "type": "Models::CustomerServiceRoom",
+        "tags": [],
+        "channel": "wa",
+        "channel_account": "Qontak",
+        "organization_id": "5c8521e5-5978-4817-9ceb-ae1710d676c9",
+        "account_uniq_id": "628117661000",
+        "channel_integration_id": "b3a2ee0b-7dac-47b8-a115-7bc63abf8f15",
+        "session": "open",
+        "session_at": "2021-03-03T22:53:29.000Z",
+        "unread_count": 2,
+        "created_at": "2021-03-03T22:36:08.196Z",
+        "updated_at": "2021-03-03T22:36:08.196Z",
+        "avatar": null,
+        "resolved_at": null,
+        "external_id": null,
+        "resolved_by_id": null,
+        "resolved_by_type": null
+    }
+}
+```
