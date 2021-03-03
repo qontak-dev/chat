@@ -1,5 +1,4 @@
-# Webhook API
-## Message Interaction
+# Message Interaction
 
 - `receive_message_from_customer` : send webhook when customer send message
 - `status_message` : send webhook if message status is change (created, sent, delivered, read)
