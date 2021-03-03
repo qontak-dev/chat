@@ -1,4 +1,4 @@
-## API Documentation
+## Introduction
 
 This document contains the reference and guideline for Chat API Services. This API allows you to integrate your app into Qontak. You can manage outbound message, incoming message, and chat rooms using all API’s that we provided on this document. Qontak API Services is a JSON-based OAuth2 API. All requests must be secure (https) and [authenticated].
 
@@ -15,7 +15,13 @@ Each API request requires authentication to identify the permission that is resp
 
 ### Authentication example
 
-Authentication example
+Include this HTTP header for each API request:
+
+```Authorization: Bearer ${ACCESS_TOKEN}```
+
+Example request
+
+
 
 ## Featured API
 - [Webhooks API](Webhook.md): Register webhook to get notification through your system.
