@@ -56,8 +56,13 @@ Postman is an application that lets you send HTTP requests to  API endpoints. Yo
 4. Select `Password` as the Grant Type
 5. Input https://chat-service.qontak.com/oauth/token to the Access Token URL field
 6. Enter your Client ID and Client Secret
-7. Finally, click on the Request Token button.
-
+7. Enter scope with space ` ` (postman required this field).
+8. Finally, click on the Request Token button.
+![postman-oauth2](../../assets/images/Postman-Oauth2.png "Oauth2")
+9. You will get the `access token` and expired duration. When an access token expires, you should request a new token.
+![postman-usetoken](../../assets/images/Use-Token.png "Use Token")
+10. To use the `access_token` when making a http request, select the available tokens.
+![available-token](../../assets/images/Available-Token.png "Available Token")
 
 
 
