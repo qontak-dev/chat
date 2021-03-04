@@ -1,5 +1,11 @@
 # Send Message
 
+## Flow
+
+![Bot-Send-Message](../../assets/images/Bot-Send-Message.png "Flow Bot Send Message")
+
+## Send Message
+
 Send Text Message to customer within window session.
 
 ```bash
