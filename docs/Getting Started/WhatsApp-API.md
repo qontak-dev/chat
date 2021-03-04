@@ -14,9 +14,9 @@ Get started send WhatsApp messages template to customer.
 ## Set Up
 Before Start using The API please make sure you have already prepare your :
 - [WhatsApp Business Account](https://docs.qontak.com/docs/hub/docs/Overview.md#business-account) and set up a line of credit, you can get [here](https://docs.qontak.com/docs/hub/docs/Overview.md#business-solution-providers).
-- [WhatsApp Business API Server](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#whatsapp-business-api-server), you can ask your [BSP](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#business-solution-providers).
+- [WhatsApp Business API Server](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#whatsapp-business-api-server), you can ask your [BSP](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#business-solution-providers).
 - Verified WhatsApp Business Phone Number.
-- [Qontak Hub Account](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#qontak-hub-account), you can get [here](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#qontak-hub-account).
+- [Qontak Hub Account](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#qontak-hub-account), you can get [here](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#qontak-hub-account).
 ## Authentication
 
 For testing our API you can use your production account directlyt:
@@ -29,7 +29,7 @@ Production:
 
 
 
-Please change your JSON body request using your  [Qontak Hub Account](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#qontak-hub-account) credentials:
+Please change your JSON body request using your  [Qontak Hub Account](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#qontak-hub-account) credentials:
 ```json
 {
   "username": "<username>",
@@ -68,7 +68,7 @@ Response example
 }
 ```
 ## Setup WhatsApp Channel
-We need to setup WhatsApp Channel Integration before send message using [WhatsApp Business API Server](https://docs.qontak.com/docs/hub/docs/Others/Glossary.md#whatsapp-business-api-server).
+We need to setup WhatsApp Channel Integration before send message using [WhatsApp Business API Server](https://docs.qontak.com/docs/chat/docs/Others/Glossary.md#whatsapp-business-api-server).
 ### Get available WhatsApp channels.
 ```json http
 {
