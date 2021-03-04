@@ -1,5 +1,10 @@
 # Webhook
 
+Who Can Use This Feature |
+--------- |
+`Bot User Token`  |
+ 
+
 In Webhook API there is two endpoints that is to register webhook notification and list all registered webhook url.
 
 # Flow

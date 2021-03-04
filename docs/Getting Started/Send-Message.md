@@ -1,6 +1,9 @@
 # Send Message
 
-`Bot User` send message to Customer. This Endpoint only works with `Bot User Token`.
+Who Can Use This Feature |
+--------- |
+`Bot User Token`  |
+All plans with `WhatsApp Channel` | 
 
 ## Flow
 
