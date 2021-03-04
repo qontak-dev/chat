@@ -1,10 +1,13 @@
 # Send Message
 
+`Bot User` send message to Customer. Available channels :
+- WhatsApp
+
 ## Flow
 
 ![Bot-Send-Message](../../assets/images/Bot-Send-Message.png "Flow Bot Send Message")
 
-## Send Message
+## Send Whatsapp Message
 
 Send Text Message to customer within window session. You can get `Room ID` from `Webhook Customer Send Message`.
 

@@ -33,7 +33,7 @@ curl --request GET \
 ## Featured API
 - [Webhooks API](Webhook.md): Register webhook to get notification through your system.
 - [WhatsApp Outbound API]: Send WhatsApp outbound template message to your customer.
-- [Message API](Message.md): Send message to your customer within session window.
+- [Message API](Send Message.md): Send message to your customer within session window.
 
 ## Use Case
 
