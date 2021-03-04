@@ -1,7 +1,6 @@
 # Send Message
 
-`Bot User` send message to Customer. Available channels :
-- WhatsApp
+`Bot User` send message to Customer.
 
 ## Flow
 
