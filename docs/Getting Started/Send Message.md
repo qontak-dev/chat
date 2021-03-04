@@ -6,7 +6,7 @@
 
 ## Send Message
 
-Send Text Message to customer within window session.
+Send Text Message to customer within window session. You can get `Room ID` from `Webhook Customer Send Message`.
 
 ```bash
 curl --request POST \
