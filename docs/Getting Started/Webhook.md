@@ -12,6 +12,7 @@ In Webhook API there is two endpoints that is to register webhook notification a
 Webhook Notifications :
 - Message Interactions : Incoming Message from Agent and Customer; Outbound Message Status.
 - Room Interactions : Room Resolved Webhook;
+- Agent Interactions : Assigned Agent; Unassigned Agent;
 
 ![chatbot-flow-webhook](../../assets/images/chatbot-flow-webhook.png "Flow Webhook")
 
