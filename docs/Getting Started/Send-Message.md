@@ -2,7 +2,7 @@
 
 Who Can Use This Feature |
 --------- |
-`Bot User Token`  |
+`Bot Token`  |
 All plans with `WhatsApp Channel` | 
 
 ## Flow
