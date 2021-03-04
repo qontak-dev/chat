@@ -1,6 +1,6 @@
 # Send Message
 
-`Bot User` send message to Customer.
+`Bot User` send message to Customer. This Endpoint only works with `Bot User Token`.
 
 ## Flow
 
