@@ -1,4 +1,4 @@
-# Message
+# Send Message
 
 Send Text Message to customer within window session.
 
@@ -12,6 +12,6 @@ curl --request POST \
     "type": "text",
     "text": "<String>"
   }'
-  ```
+```
 
 
